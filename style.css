@@ -69,6 +69,15 @@ nav ul {
   padding-top: 100px; /* Adjust based on your header height */
 }
 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f0f0f0; /* Just for testing */
+}
+
 nav ul::-webkit-scrollbar {
   height: 6px;
   background-color: rgba(241, 241, 241, 0.5);
