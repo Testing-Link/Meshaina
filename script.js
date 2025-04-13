@@ -10,6 +10,15 @@ const languages = [
     { code: 'ru', name: 'Русский' }
 ];
 
+const translations = {
+  en: {
+    heroTitle: "Connecting Destinations, Elevating Journeys",
+    heroDesc: "Experience the future of mobility with gamified transportation",
+    startButton: "Start Your Adventure"
+  }
+  // Add other languages as needed
+};
+
 const currentLang = localStorage.getItem('lang') || 'en';
 document.documentElement.lang = currentLang;
 document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
