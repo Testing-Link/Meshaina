@@ -129,7 +129,7 @@ nav ul li a:hover::after {
 }
 
 .hero {
-  padding-top: 6rem; /* or whatever clears the header height */
+
   min-height: 100vh;
   display: flex;
   align-items: center;
