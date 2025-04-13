@@ -129,6 +129,7 @@ nav ul li a:hover::after {
 }
 
 .hero {
+  padding-top: 6rem; /* or whatever clears the header height */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -158,6 +159,7 @@ nav ul li a:hover::after {
 }
 
 .hero-content p {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   font-weight: 700;
 }
 
