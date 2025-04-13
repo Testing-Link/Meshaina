@@ -1,9 +1,0 @@
-.hero {
-  padding-top: 7rem;
-  background-color: #f0f8ff; /* For visibility */
-}
-
-[data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
-}
