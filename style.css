@@ -58,6 +58,13 @@ nav ul {
   flex-wrap: nowrap;
 }
 
+.hero, .hero * {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: black !important;
+}
+
 nav ul::-webkit-scrollbar {
   height: 6px;
   background-color: rgba(241, 241, 241, 0.5);
