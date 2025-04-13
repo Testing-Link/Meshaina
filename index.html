@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meshaina</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="attached_assets/image_1744526934489.png" alt="Meshaina Logo" class="logo-image">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#ai-assistant">AI Assistant</a></li>
+        <li><a href="#download">Download</a></li>
+        <li class="language-selector">
+          <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <!-- More languages will be added via JavaScript -->
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="heroTitle" data-aos="fade-up">Connecting Destinations, Elevating Journeys</h1>
+      <p data-i18n="heroDesc" data-aos="fade-up" data-aos-delay="100"><strong>Experience the future of mobility with
+          gamified transportation</strong></p>
+      <a href="https://metrodreamin.com/view/MGNreW9rMzVaZlNwanNOdVM3Z05NNnNJZHgzMnwx" target="_blank"
+        rel="noopener noreferrer">
+        <button class="cta-button" data-i18n="startButton" data-aos="fade-up" data-aos-delay="200">Start Your
+          Adventure</button>
+      </a>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+        <h3>Level 12</h3>
+        <div class="xp-bar">
+          <div class="xp-progress" style="width: 75%"></div>
+        </div>
+        <p>2250 / 3000 XP</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="feature-grid">
+      <div class="feature-card" onclick="showMissionModal()">
+        <h3>🎯 Mission-Based Travel</h3>
+        <p>Complete missions, earn XP and rewards</p>
+        <button class="feature-button">View Missions</button>
+      </div>
+      <div class="feature-card" onclick="showARModal()">
+        <h3>🧭 Augmented Reality</h3>
+        <p>Unlock AR experiences and cultural stories</p>
+        <button class="feature-button">Explore AR</button>
+      </div>
+      <div class="feature-card" onclick="showSquadModal()">
+        <h3>👫 Squads & Social</h3>
+        <p>Build your commuter squad and compete</p>
+        <button class="feature-button">Join Squad</button>
+      </div>
+      <div class="feature-card" onclick="showEcoModal()">
+        <h3>🌍 Eco-Currency Wallet</h3>
+        <p>Track CO₂ and earn Sawari Credits</p>
+        <button class="feature-button">View Wallet</button>
+      </div>
+    </div>
+    <div id="featureModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="section-content">
+      <h2>Experience</h2>
+      <div class="experience-grid">
+        <div class="experience-item"
+          onclick="showExperienceDetails('Personalized Routes', 'Get custom-tailored route suggestions based on your travel history and preferences. Our AI learns from your choices to provide better recommendations.')">
+          <h3>Personalized Routes</h3>
+          <p>Smart navigation based on your preferences</p>
+          <button class="feature-button">View Details</button>
+        </div>
+        <div class="experience-item"
+          onclick="showExperienceDetails('Cultural Discovery', 'Explore the rich heritage of Saudi Arabia through interactive guided tours and cultural landmarks along your route.')">
+          <h3>Cultural Discovery</h3>
+          <p>Learn about local landmarks during your journey</p>
+          <button class="feature-button">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rewards" class="section">
+    <div class="section-content">
+      <h2>Rewards</h2>
+      <div class="rewards-grid">
+        <div class="rewards-item"
+          onclick="showRewardDetails('Daily Rewards', 'Get rewarded for your daily commuting habits. Complete streaks for bonus points!', 100)">
+          <h3>Daily Rewards</h3>
+          <p>Earn points for consistent green commuting</p>
+          <button class="feature-button">View Rewards</button>
+        </div>
+        <div class="rewards-item"
+          onclick="showRewardDetails('Special Achievements', 'Unlock exclusive badges and rewards for reaching milestones in your eco-friendly journey.', 500)">
+          <h3>Special Achievements</h3>
+          <p>Unlock badges and special status rewards</p>
+          <button class="feature-button">View Achievements</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="progress" class="section">
+    <div class="section-content">
+      <h2>Your Progress</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <h3>Level 12</h3>
+          <div class="xp-bar">
+            <div class="xp-progress" style="width: 75%"></div>
+          </div>
+          <p>2250 / 3000 XP</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🌍</div>
+          <h3>CO₂ Saved</h3>
+          <p class="stat-value">125kg</p>
+          <p>Top 10% of users</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <h3>Achievements</h3>
+          <div class="badge-grid">
+            <span class="badge" title="Early Adopter">🎉</span>
+            <span class="badge" title="Green Champion">🌱</span>
+            <span class="badge" title="Social Butterfly">🦋</span>
+            <span class="badge" title="Explorer">🧭</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-assistant" class="section">
+    <div class="assistant-container">
+      <div class="assistant-profile">
+        <img
+          src="attached_assets/image_1744526822685.png"
+          alt="AI Assistant" class="assistant-image">
+        <h3>Meet Abdu Your Travel Companion</h3>
+      </div>
+      <div class="assistant-message">
+        <div class="message-box">
+          <p class="message-text">Think of me as your personal commute coach! I'll help you navigate the city smartly,
+            finding the best routes and saving you money. I'm here to make your journey smoother and more enjoyable! 🌟
+          </p>
+        </div>
+        <div class="message-box">
+          <p class="message-text">I'll keep you updated with real-time tips and alerts about traffic, weather, and
+            special offers to make your commute better! 🚊 🚌</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section">
+    <div class="hero-content">
+      <h2>Download Now</h2>
+      <p>Begin your journey of city exploration</p>
+      <button class="cta-button">Get the App</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Meshaina - All rights reserved</p>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
