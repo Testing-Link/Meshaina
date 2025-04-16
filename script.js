@@ -88,7 +88,7 @@ function showEcoModal() {
         <div class="eco-stats">
             <h3>Your Impact</h3>
             <p>CO₂ Saved: 125kg</p>
-            <p>Rihala Points: 2,500</p>
+            <p>Rihala Points: 2,500000</p>
             <h4>Available Rewards:</h4>
             <ul>
                 <li>Plant a Tree (500 credits)</li>
